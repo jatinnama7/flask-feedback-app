@@ -14,7 +14,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view the live app](flask-feedback-app-production-06a0.up.railway.app)
+🔗 [Click here to view the live app](https://flask-feedback-app-production-06a0.up.railway.app)
 
 ---
 
