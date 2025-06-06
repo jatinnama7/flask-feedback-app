@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Base Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f2f6f9, #dbe9f4);
+            color: #333;
+            padding: 40px;
+        }
+
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px 14px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 15px;
+            width: 100%;
+            padding: 12px;
+            background-color: #3498db;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+            transform: scale(1.02);
+        }
+
+        .feedback-section {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-entry {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-left: 4px solid #3498db;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .feedback-entry strong {
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Submit Feedback</h1>
+
+    <form method="POST">
+        <label for="name">Your Name</label><br>
+        <input type="text" name="name" placeholder="Your Name" required><br><br>
+
+        <label for="message">Your Feedback</label><br>
+        <textarea name="message" placeholder="Your Feedback" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <div class="feedback-section">
+        <h2>All Feedback</h2>
+        {% for fb in feedback %}
+            <div class="feedback-entry">
+                <p><strong>{{ fb.name }}</strong>: {{ fb.message }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
