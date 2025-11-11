@@ -14,7 +14,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [Click here to view the live app](https://flask-feedback-app-production-06a0.up.railway.app)
+🔗 [Click here to view the live app](https://flask-feedback-app-tnxh.onrender.com)
 
 ---
 
@@ -132,23 +132,6 @@ on:
   push:
     branches: [main]
 ```
-
-To configure:
-
-- Add your `RAILWAY_TOKEN` in GitHub → **Settings > Secrets > Actions**
-
----
-
-## 🌐 Deployment with Railway
-
-### 1. [Create an account on Railway](https://railway.app)
-
-### 2. Get your `RAILWAY_TOKEN`
-
-### 3. Add it to your GitHub Secrets as `RAILWAY_TOKEN`
-
-### 4. Push to `main` → 🎉 Auto deploy happens!
-
 ---
 
 ## 🤝 Contributing
